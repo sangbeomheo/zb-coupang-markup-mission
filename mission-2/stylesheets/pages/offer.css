@@ -1,0 +1,179 @@
+/* 오늘의 쇼핑 제안 */
+
+/* 초기화 */
+h1,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/* 레이아웃 */
+.header,
+.sectionWrap {
+  margin: 0 auto;
+  width: 1022px;
+}
+
+/* header 관련 */
+.header {
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+.header a {
+  display: block;
+}
+.header .logoImage {
+  width: 176px;
+  height: 40px;
+}
+
+/* section 제목 */
+.sectionHeadline {
+  display: flex;
+  margin: 0;
+  height: 30px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-back);
+}
+.iconShopping {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/icon/shopping.svg") no-repeat center center;
+}
+
+/* 상품 리스트 */
+.products {
+  margin-top: 24px;
+  display: flex;
+  gap: 5px;
+}
+
+/* 상품 카드 */
+.card {
+  position: relative;
+  width: 200px;
+  height: 270px;
+  padding: 14px 14px 38px;
+}
+.card a {
+  display: block;
+}
+
+/* 상품 카드 - 사진 */
+.card .productImg {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  height: 160px;
+}
+
+/* 상품 카드 - 제목 */
+.card .title {
+  display: block;
+  margin: 12px 0;
+  font-size: 1.4rem;
+  color: var(--color-back);
+  line-height: 1.2;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 상품 카드 - 할인율 */
+.card .discountRate {
+  position: absolute;
+  padding: 4px 0 0;
+  top: 0;
+  left: 0;
+  width: 53px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-red-500);
+  border-radius: 0 0 4px 0;
+}
+.card .discountRate.noRate {
+  display: none;
+}
+
+/* 상품 카드 - 배송유형 */
+.card .deliveryInfo {
+  display: block;
+  overflow: hidden;
+  height: 17px;
+}
+.card .deliveryInfo.free {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+.card .deliveryInfo.rocket img {
+  width: 55px;
+  height: 16px;
+}
+
+/* 상품 카드 내부 레이아웃 */
+.card .consumerRateANDreviewCount {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* 상품 카드 - 리뷰 수 */
+.card .reviewCount {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+/* 상품 카드 - 구매자 평점 */
+.card .consumerRate {
+  display: inline-block;
+  margin-right: 4px;
+  width: 68px;
+  height: 12px;
+  background: url("../../assets/sprites/rating-stars.png") no-repeat;
+}
+.card .consumerRate.score0 {
+  background-position: 0 0;
+}
+.card .consumerRate.score5 {
+  background-position: 0 -14px;
+}
+.card .consumerRate.score10 {
+  background-position: 0 -28px;
+}
+.card .consumerRate.score15 {
+  background-position: 0 -42px;
+}
+.card .consumerRate.score20 {
+  background-position: 0 -56px;
+}
+.card .consumerRate.score25 {
+  background-position: 0 -70px;
+}
+.card .consumerRate.score30 {
+  background-position: 0 -84px;
+}
+.card .consumerRate.score35 {
+  background-position: 0 -98px;
+}
+.card .consumerRate.score40 {
+  background-position: 0 -112px;
+}
+.card .consumerRate.score45 {
+  background-position: 0 -126px;
+}
+.card .consumerRate.score50 {
+  background-position: 0 -140px;
+}
