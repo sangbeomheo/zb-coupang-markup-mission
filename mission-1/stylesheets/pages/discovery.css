@@ -1,0 +1,114 @@
+/* CSS 작성 */
+.header,
+.content {
+  margin: 0 auto;
+  width: 1020px;
+}
+
+.header {
+  padding: 100px 0 48px;
+}
+.header .logoImage {
+  width: 176px;
+  height: 40px;
+}
+
+.headline {
+  margin: 0 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.headline .main {
+  font-size: 24px;
+}
+.headline .sub {
+  color: var(--grayscale-600);
+}
+.headline .verticalDividingLine {
+  color: var(--grayscale-600);
+}
+
+.products {
+  margin-bottom: 64px;
+}
+.products::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.card {
+  position: relative;
+  float: left;
+  margin: 0 16px 16px 0;
+
+  height: 310px;
+  border: 1px solid var(--grayscale-500);
+  overflow: hidden;
+}
+.card.big {
+  width: 502px;
+}
+.card.small {
+  width: 243px;
+}
+.card.right {
+  margin-right: 0;
+}
+.card.bottom {
+  margin-bottom: 0;
+}
+
+.card .productImg {
+  padding: 20px 28px;
+}
+
+.card a {
+  height: 310px;
+  display: block;
+}
+
+.card:hover,
+.card:focus {
+  border: 1px solid var(--color-blue-600);
+}
+
+.card button {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  word-break: keep-all;
+  color: var(--grayscale-white);
+  border: none;
+  background-color: var(--bg-black-20);
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.card button:hover,
+.card button:focus,
+.card:hover button,
+.card:focus button {
+  width: 112px;
+  justify-content: right;
+  background-color: var(--color-blue-600);
+}
+
+.card button:hover::before,
+.card button:focus::before,
+.card:hover button::before,
+.card:focus button::before {
+  content: "구매하기";
+}
