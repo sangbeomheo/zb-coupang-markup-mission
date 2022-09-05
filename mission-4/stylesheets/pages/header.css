@@ -1,0 +1,241 @@
+/* 초기화 */
+h1,
+h2,
+h3,
+h4,
+ul,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+select,
+button {
+  border: none;
+  appearance: none;
+  background: none;
+}
+
+/* 헤더 */
+.header {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+/* 로그인 바 */
+.loginBar {
+  height: 34px;
+  background-color: var(--color-gray-100);
+}
+.loginBar .inner {
+  margin: 0 auto;
+  width: 1020px;
+}
+.loginBar ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  font-size: 1.2rem;
+  color: var(--color-black);
+}
+.loginBar li:nth-child(1) {
+  margin-left: auto;
+  order: 3;
+}
+.loginBar li:nth-child(2) {
+  order: 4;
+}
+.loginBar li:nth-child(3) {
+  order: 5;
+}
+.loginBar li:nth-child(4) {
+  order: 1;
+}
+.loginBar li:nth-child(5) {
+  order: 2;
+}
+
+/* 그리드 레이아웃 */
+.container {
+  margin: 0 auto;
+  width: 1020px;
+  display: grid;
+  grid-template-columns: 110px 246px 554px 55px 55px;
+  grid-template-rows: 30px 54px 32px;
+}
+.logo {
+  order: 2;
+  grid-row: 2 / span 1;
+}
+.button--category {
+  order: 1;
+  grid-row: 1 / span 3;
+}
+.searchForm {
+  order: 3;
+  grid-row: 2 / span 1;
+}
+.myCoupang {
+  order: 4;
+  grid-row: 2 / span 1;
+}
+.cart {
+  order: 5;
+  grid-row: 2 / span 1;
+}
+.linkMenu {
+  order: 6;
+  grid-column: 2 / span 4;
+  grid-row: 3 / span 1;
+}
+
+/* 로고 */
+.logo {
+  padding: 0 30px 0 40px;
+  background: url(../../assets/logo/logo.svg) no-repeat center top;
+  background-size: 176px 40px;
+}
+.logo a {
+  display: block;
+  text-indent: -9999em;
+}
+
+/* 카테고리 버튼 */
+.button--category {
+  border: none;
+  font-size: 1.2rem;
+  line-height: 155px;
+  color: var(--color-white);
+  background: var(--color-blue-600) url("../../assets/icon/hamburger.svg") no-repeat center 30px;
+  overflow: hidden;
+}
+
+/* 검색창 */
+.searchForm {
+  margin-right: 38px;
+  display: flex;
+  border: 1px solid var(--color-blue-600);
+  height: 40px;
+}
+.searchForm .selectBox {
+  padding: 0 12px;
+  width: 134px;
+  font-size: 1.2rem;
+  color: var(--color-gray-700);
+  background: url("../../assets/icon/IconMoreDown.svg") no-repeat right center;
+}
+.searchForm .inputBox {
+  padding: 0 10px;
+  width: 300px;
+}
+.searchForm .inputBox::placeholder {
+  font-size: 1.2rem;
+  color: var(--color-gray-600);
+}
+.searchForm .button {
+  width: 40px;
+  height: 40px;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+.searchForm .button.voice {
+  background: url("../../assets/icon/mic.svg") center center;
+}
+.searchForm .button.keyword {
+  background: url("../../assets/icon/search.svg") center center;
+}
+
+/* 아이콘메뉴 - 마이쿠팡, 장바구니 */
+.iconMenu {
+  position: relative;
+  text-align: center;
+}
+.iconMenu button {
+  width: 45px;
+  height: 58px;
+  font-size: 1.2rem;
+  color: var(--color-black);
+  line-height: 84px;
+}
+.iconMenu .tooltip {
+  display: none;
+  position: absolute;
+  color: var(--color-black);
+  text-align: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-500);
+}
+.iconMenu .tooltip::before {
+  content: "";
+  position: absolute;
+  border-bottom: 6px solid var(--color-gray-500);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.iconMenu.is--active .tooltip,
+.iconMenu.cart--empty .tooltip {
+  display: block;
+}
+
+/* 마이쿠팡 버튼 */
+.myCoupang button {
+  background: url("../../assets/icon/my-coupang.svg") no-repeat center top;
+}
+.myCoupang .tooltip {
+  left: calc(50% - 45px);
+  width: 90px;
+  height: 130px;
+  font-size: 1.2rem;
+}
+.myCoupang .tooltip::before {
+  top: -6px;
+  left: calc(50% - 6px);
+}
+.myCoupang .tooltip li {
+  margin-top: 20px;
+}
+
+/* 장바구니 버튼 */
+.cart button {
+  background: url("../../assets/icon/cart.svg") no-repeat center top;
+}
+.cart .count {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -4px;
+  right: 0;
+  line-height: 17px;
+  color: var(--color-white);
+  background: var(--color-blue-600);
+  border-radius: 16px;
+}
+.cart .tooltip {
+  padding-top: 36px;
+  right: 0;
+  width: 288px;
+  height: 99px;
+  font-size: 1.4rem;
+}
+.cart .tooltip::before {
+  top: -6px;
+  right: 20px;
+}
+
+/* 링크 메뉴 */
+.linkMenu {
+  margin-left: 28px;
+}
+.linkMenu li {
+  padding: 6px 14px;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.linkMenu li img {
+  margin: 0 2px;
+}
