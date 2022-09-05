@@ -1,0 +1,236 @@
+/* 초기화 */
+h1,
+h2,
+h4,
+ul,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  appearance: none;
+  background: none;
+}
+
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+.header {
+  border: 1px solid var(--color-gray-100);
+}
+.header__inner {
+  margin: 0 auto;
+  width: 1020px;
+}
+.button--category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 110px;
+  height: 116px;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  background: var(--color-blue-600);
+  outline: none;
+}
+.button--category:focus-visible {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--color-red-500);
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+.navigation h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+
+.navigation__inner {
+  display: none;
+  margin: 0 auto;
+  width: 1020px;
+}
+.navigation__inner.is--active {
+  display: block;
+}
+.navigation__container {
+  position: relative;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  width: 180px;
+  height: 500px;
+  background: var(--color-white);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.navigation__list.depth2,
+.navigation__list.depth3 {
+  display: none;
+  left: 180px;
+}
+.navigation__list.depth2.is--active,
+.navigation__list.depth3.is--active {
+  display: block;
+}
+.navigation__list.depth2::before,
+.navigation__list.depth3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 500px;
+  background: var(--color-gray-300);
+}
+
+.navigation__list a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+}
+.navigation__list a:hover,
+.navigation__list a:focus {
+  font-weight: 700;
+  color: var(--color-blue-600);
+  background: url("../../assets/icon/more-right-active.svg") no-repeat right 20px center;
+}
+.navigation__list.depth3 a:hover,
+.navigation__list.depth3 a:focus {
+  background: none;
+}
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+.customer-guide {
+  background: var(--color-gray-200);
+}
+.coupang-infomation {
+  background: var(--color-white);
+}
+.copyright-sns {
+  background: var(--color-gray-900);
+}
+.footer-content__inner {
+  margin: 0 auto;
+  width: 1020px;
+}
+
+.customer-guide .footer-content__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: var(--color-gray-800);
+}
+
+.coupang-infomation .footer-content__inner {
+  padding: 32px 0;
+  width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  gap: 63px;
+  color: var(--color-gray-800);
+}
+.coupang-infomation .gray-logo {
+  font-size: 1px;
+  text-indent: -9999em;
+  width: 176px;
+  height: 40px;
+  background: url("../../assets/logo/logo-mono.svg") no-repeat;
+}
+.coupang-infomation .infomation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.coupang-infomation .payment-guarantee {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 282px;
+}
+.coupang-infomation .links a {
+  display: inline-block;
+}
+.coupang-infomation .links a:first-child {
+  padding-right: 12px;
+  border-right: 1px solid var(--color-gray-600);
+}
+.coupang-infomation .links a:last-child {
+  padding-left: 8px;
+}
+.coupang-infomation .tel {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.coupang-infomation .address {
+  margin: 12px 0 8px;
+  font-style: normal;
+}
+
+.copyright-sns .footer-content__inner {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.copyright-sns p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14.4px;
+  color: var(--color-white);
+}
+.copyright-sns .sns-links {
+  display: flex;
+  gap: 10px;
+}
+.copyright-sns .sns-links a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 24px;
+}
+.copyright-sns .sns-links a:last-child {
+  background: linear-gradient(
+    174.12deg,
+    #285aeb 5.61%,
+    #bc1888 22.32%,
+    #cc2366 36.16%,
+    #dc2743 51.91%,
+    #e6683c 73.38%,
+    #f09433 91.99%
+  );
+}
